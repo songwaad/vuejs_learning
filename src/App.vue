@@ -1,16 +1,13 @@
 <script setup>
-const message = 'Hello Vue 3 + Vite!'
+import { ref } from 'vue';
+
+const count = ref(0);
+
+const increment = () => {
+  count.value++;
+}
 </script>
 
 <template>
-  <div class="hello">
-    Hello {{ message }}
-  </div>
+  {{ count }} <button @click="increment"> Increment </button>
 </template>
-
-<style>
-.hello {
-  background-color: blue;
-  color: white
-}
-</style>
