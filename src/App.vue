@@ -1,13 +1,14 @@
 <script setup>
-import { ref } from 'vue';
+import { reactive } from 'vue';
 
-const count = ref(0);
+const state = reactive({
+  count: 0,})
 
 const increment = () => {
-  count.value++;
+  state.count++;
 }
 </script>
 
 <template>
-  {{ count }} <button @click="increment"> Increment </button>
+  {{ state }} <button @click="increment"> Increment </button>
 </template>
