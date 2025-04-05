@@ -1,14 +1,10 @@
 <script setup>
-import { reactive } from 'vue';
+import { ref } from 'vue';
 
-const state = reactive({
-  count: 0,})
-
-const increment = () => {
-  state.count++;
-}
+const searchText = ref('');
 </script>
 
 <template>
-  {{ state }} <button @click="increment"> Increment </button>
+  <div>{{ searchText }}</div>
+  <input v-model="searchText">
 </template>
